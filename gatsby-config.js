@@ -6,17 +6,7 @@
 
 module.exports = {
   /* Your site config here */
-  siteMetadata: {
-    title: `IamSaquib`,
-    description: `Personal Website to showcase my works and blogs`,
-    siteUrl: `https://iamsaquib.netlify.com/`,
-    home: {
-      title: `Hi! I'm Saquib Ul Hassan`,
-      description: `I'm a Fullstack Web Developer, working for distill.io, capable of building web applications in Go and Rust and deploying them.`,
-    },
-    /* W3Layouts domain verification key for contact forms https://my.w3layouts.com/Forms/ */
-    w3l_dom_key: `5e95aae43da6bCF_Domain_verify` 
-  },
+  siteMetadata: require("./site-meta-data.json"),
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -28,19 +18,21 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [{
-          resolve: `gatsby-remark-prismjs`,
-          options: {
-            classPrefix: "language-",
-            inlineCodeMarker: null,
-            aliases: {},
-            showLineNumbers: false,
-            noInlineHighlight: false,
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+            },
           },
-        },
-        {
-          resolve: 'gatsby-remark-emojis',
-        }],
+          {
+            resolve: "gatsby-remark-emojis",
+          },
+        ],
       },
     },
     {
@@ -49,10 +41,27 @@ module.exports = {
         // The property ID; the tracking code won't be generated without it
         trackingId: "UA-163687461-1",
         head: true,
-      }
+      },
     },
-    `gatsby-plugin-sass`, 
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Iamsaquib`,
+        short_name: `iamsaquib`,
+        start_url: `/`,
+        background_color: `#fff`,
+        theme_color: `#381696`,
+        display: `standalone`,
+        icon: "src/images/icon.png",
+      },
+    },
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify-cms`,
+
+    'gatsby-plugin-dark-mode',
+    // siteURL is a must for sitemap generation
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-offline`,
   ],
-}
+};
