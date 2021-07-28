@@ -4,7 +4,7 @@
   "siteUrl": "https://iamsaquib.netlify.com/",
   "home": {
     "title": "Hi! I'm Saquib Ul Hassan",
-    "description": "I'm a Fullstack Web Developer, working for distill.io, capable of building web applications in Go and Rust and deploying them."
+    "description": "Software Engineer at Distill.io, capable of building backend and tools in different languages including NodeJS, GoLang, Rust. Write deployment scripts in python, deploy websites using docker on dedicated servers, AWS or GCS. Knowledge of browser architecture and puppeteer for web scraping automation. Currently learning and building DeFi Blockchain based solution."
   },
   "w3l_dom_key": "5e95aae43da6bCF_Domain_verify"
 }
