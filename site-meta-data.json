@@ -1,10 +1,10 @@
 {
-  "title": "IamSaquib",
+  "title": "iamsaquib",
   "description": "Personal Website to showcase my works and blogs",
   "siteUrl": "https://iamsaquib.netlify.com/",
   "home": {
     "title": "Hi! I'm Saquib Ul Hassan",
-    "description": "I am a software engineer with 4 years of experience who is comfortable working with Javascript, Rust, and distributed systems to deliver scalable and reliable services. I have proven experience in creating microservices, and event-driven systems, and managing them, also creating tools and services in Rust."
+    "description": "I am a Senior Software Engineer at BrowserStack who is comfortable working with Javascript, Rust, and distributed systems to deliver scalable and reliable services. I have proven experience in creating microservices, and event-driven systems, and managing them, also creating tools and services in Rust."
   },
   "w3l_dom_key": "5e95aae43da6bCF_Domain_verify"
 }
